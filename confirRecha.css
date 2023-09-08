@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Bentoga";
+  src: url('/Recursos/Bentoga-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: "Euphoria Script";
+  src: url('/Recursos/EuphoriaScript-Regular.ttf') format('truetype');
+}
+
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #036 17.81%, #AAADFC 100%);
+  color: white;
+}
+.titulo{
+  width: 80%;
+  margin-top: 127px;
+  text-align: center;
+  font-family: Bentoga,Georgia, 'Times New Roman', Times, serif;
+  font-size: 87px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 139.523%; /* 121.385px */
+}

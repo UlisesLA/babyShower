@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Invitación Babyshower</title>
+   <link rel="stylesheet" href="normalize.css">
+   <link rel="stylesheet" href="style.css">
+   <script type="module" src="scrip.js"></script>
+</head>
+<body>
+   <section class="computadora">  
+      <!--Mensaje Bienvenida-->    
+      <div class="tarjetaPresentacion">
+         <img class="imagBS" src="/Recursos/Titulo.svg" alt="Babyshower">
+         <h2 class="SaludoPersona">¡Hola!<br><span id="personaInvitada">Amigo</span></h2> 
+      </div>
+      <!--Cuerpo de la invitacion-->
+      <section class="cuerpoInvitacionCompleta">   
+         <!--Invitacion-->
+         <div class="invitacion">
+            <!--Imagen del calamar-->
+            <div class="contenedorCalamar"><img class="calamar" src="/Recursos/calamar.svg" alt="Calamar"></div>
+            <!--Texto de la invitacion-->
+            <div class="mensaje">
+               <p>Te invitamos a unirte con nosotros para celebrar la llegada de nuestro bebé al mundo.</p>
+               <h2>Nos complacería tu asistencia.</h2>
+               <h3>Att: Ana y Ulises</h3>
+            </div>
+         </div>
+         <!--Informacion del evento-->
+         <div class="informacion">
+            <!--Lado izquierdo de la informacion-->
+            <div class="infoCol">
+               <h2>Día</h2>
+               <p>Sábado <b>8 Octubre</b><br>13:00 hrs</p>
+               <h2>Importante</h2>
+               <p>No hay estacionamiento solo  en la calle</p>
+            </div>
+            <!--Lado derecho de la informacion-->
+            <divc class="infoCol">
+               <h2>Dirección:</h2>
+               <p>C. Camino a Belén 85, Sears Roebuck, Álvaro Obregón, 01120 Ciudad de México, CDMX (Salón de fiestas)</p>
+               <button onclick="verMapa();" class="boton">Ver mapa</button>
+               <div id="mapa"></div>
+            </div>
+         </div>
+         <!--Confirmacion-->
+         <div class="confirmacion">
+            <h2>¡Ayúdanos confirmando <br>tu asistencia!</h2>
+            <div class="infFinal"> 
+               <div class="cajaConfirmacion">                  
+                  <p>Coloca el número de personas que asistirán incluyéndote. </p>
+                  <input class="numeroDePersonas" type="number" min="1" max="4" value="1"/>
+                  <div class="botones">
+                     <button class="boton" onclick="window.location.href='./confirmacion.html'">Confirmar</button>
+                     <button class="boton">No podre asisitir</button>
+                  </div>
+               </div>
+               <div class="cajaConfirmacion"><img class="imgPinPol" src="/Recursos/PolPin.gif" alt="Pollito y pinguino"></div>
+            </div>
+         </div>   
+      </section>
+   </section>   
+   <script>
+      function verMapa(){
+         const map = document.getElementById('mapa');
+         map.innerHTML = "<iframe class='ubicaMap' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.8181584627883!2d-99.19472676161162!3d19.40062285546665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201e61d87801f%3A0x12ccd5201ff7dacd!2sCondominio%20de%20empleados%20de%20sears!5e0!3m2!1ses-419!2smx!4v1693426438878!5m2!1ses-419!2smx' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
+      }
+   </script>
+</body>
+</html>

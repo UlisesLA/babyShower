@@ -1,0 +1,358 @@
+@font-face {
+   font-family: "Bentoga";
+   src: url('/Recursos/Bentoga-Thin.otf') format('opentype');
+}
+@font-face {
+   font-family: "Euphoria Script";
+   src: url('/Recursos/EuphoriaScript-Regular.ttf') format('truetype');
+}
+body{
+   background-color: aliceblue;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   overflow-x: hidden; /* Oculta el scroll horizontal */
+}
+
+.tarjetaPresentacion{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-image: url('/Recursos/fondo_strellas.jpg');
+   background-size: 50%;    
+   background-position: center;    
+}
+.imagBS{
+   padding-top: 70px;
+   width: 40%;
+}
+.SaludoPersona{
+   width: 100%;
+   color: #FFF;
+   text-align: center;
+   font-family: Bentoga, Georgia, 'Times New Roman', Times, serif;
+   font-size: 95px;
+   font-style: normal;
+   font-weight: 100;
+   line-height: 139.523%;
+   text-transform: capitalize;
+}
+@media (max-width: 768px){
+   .SaludoPersona{
+      width: 100%;
+   }
+   .imagBS{
+      width: 75%;
+   }
+   
+}
+@media (max-width: 450px){
+   .imagBS{
+      width: 75%;
+   }
+   .SaludoPersona{
+      font-size: 50px;
+      width: 80%;
+   }
+}
+/******************************************************************************************************************************/
+/*Contedor de toda la invitacion*/
+.cuerpoInvitacionCompleta{
+   width: 100%;
+   background: linear-gradient(180deg, #036 17.81%, #AAADFC 100%);
+}
+/******************************************************************************************************************************/
+/*Contedor de la invitacion Principal*/
+.invitacion{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 177px;
+}
+/*Calamar*/
+.contenedorCalamar{
+   width: 25%;
+   margin: 0px 5%;
+}
+.calamar{
+   width: 100%;
+}
+/*Contenedor del mensaje de la invitacion*/
+.mensaje{
+   width: 55%;
+   margin: 0px 5%;
+   padding-bottom: 15%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.mensaje p {
+   width: 100%;
+   color: #FFF;
+   font-family: Roboto, Arial, Helvetica, sans-serif;
+   font-size: 44px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 139.523%;
+}
+.mensaje h2{
+   width: 100%;
+   margin: 34px 0px 100px;
+   color: #FFF;
+   font-family: Bentoga,Georgia, 'Times New Roman', Times, serif;
+   font-size: 51px;
+   font-style: normal;
+   font-weight: 100;
+   line-height: 139.523%;   
+}
+.mensaje h3{
+   width: 75%;
+   margin: 0px 0px;
+   color: #FFF;
+   text-align: right;
+   font-family: Euphoria Script;
+   font-size: 74px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 139.523%;   
+}
+/*Mediaqueri de la parate de invitacion*/
+@media (max-width:780px){
+   .invitacion{
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      padding-top: 10%;      
+   }
+   .contenedorCalamar{
+      width: 35%;
+   }
+   .mensaje{
+      text-align: center !important;
+      width: 90%;
+      margin: 10px 0px 30px;
+      padding: 0;
+   }
+   .mensaje h2 {
+      margin: 34px 0px ;
+   }
+   .mensaje h3{
+      width: 100%;
+      text-align: center;
+   }
+}
+
+@media (max-width:450px){
+   .contenedorCalamar{
+      width: 30%;
+   }
+   .mensaje{
+      width: 90%;
+   }
+   .mensaje p {
+      font-size: 22px;
+   }
+   .mensaje h2{
+      font-size: 26px;
+   }
+   .mensaje h3 {
+      font-size: 43px;
+   }
+}
+/******************************************************************************************************************************/
+/*Informacion de la aplicacion contentenedor principal*/
+.informacion{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   color: #fff;   
+}
+/*Informacion de la parte izquierda*/
+.infoCol{
+   width: 40%;
+   margin: 0px 5%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;   
+   align-items: center;
+}
+.infoCol h2{
+   width: 100%;
+   margin: 71px 0px 0px;
+   font-family: Bentoga, Georgia, 'Times New Roman', Times, serif;
+   font-size: 50px;
+   font-style: normal;
+   font-weight: 100;
+   line-height: 139.523%;
+}
+.infoCol p{
+   width: 100%;
+   margin: 0;
+   font-family: Roboto, Arial, Helvetica, sans-serif;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 139.523%;
+}
+/*Estilo boton*/
+.boton{
+   width: 351px;
+   height: 70px;
+   margin: 25px 0px;
+   border: none;
+   border-radius: 40px;   
+   color: #002B56;
+   background: #f4f4f4;
+   font-family: Roboto, Arial, Helvetica, sans-serif;
+   font-size: 30px;
+   font-style: normal;
+   font-weight: 500;
+   text-align: center;   
+   line-height: 139.523%; 
+   cursor: pointer;   
+}
+.boton:hover{
+   color: #f4f4f4;
+   background-color: #002B56;
+}
+#mapa{
+   width: 100%;
+}
+.ubicaMap{
+   padding: 30px 0px;
+   width: 95%;
+   height: 250px;
+}
+@media (max-width:780px){
+   .informacion{
+      height: auto;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 88px;
+   }
+   .infoCol{
+      width: 90%;
+      margin: 25px 0px;
+      text-align: center;
+   }
+
+   .infoCol h2{
+      margin: 28px 0px 0px;
+   }
+   .infoCol p{
+      margin-bottom: 28px;
+   }
+}
+@media (max-width:450px){
+   .infoCol h2{
+      font-size: 32px;
+   }
+   .infoCol p {
+      width: 90%;
+      font-size: 22px;
+   }
+}
+/******************************************************************************************************************************/
+.confirmacion{
+   width: 100%;
+   height: 100vh;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.confirmacion h2{
+   width: 100%;
+   color: #FFF;
+   text-align: center;
+   font-family: Bentoga,Georgia, 'Times New Roman', Times, serif;
+   font-size: 81px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 139.523%;
+   margin: 0;
+}
+.infFinal{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+}
+.cajaConfirmacion{
+   width: 40%;
+   margin: 0px 5%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;   
+}
+.cajaConfirmacion p{
+   width: 100%;
+   color: #FFF;
+   font-family: Roboto, Arial, Helvetica, sans-serif;
+   font-size: 35px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 139.523%;
+   text-align: center;
+}
+.imgPinPol{
+   width: 100%;
+}
+.numeroDePersonas{
+   width: 351px;
+   height: 70px;
+   margin: 15px;
+   padding: 5px;
+   font-size: 24px;
+   background-color: #f4f4f4;
+   font-family: Roboto, Arial, Helvetica, sans-serif;
+   text-align: center;
+   border: none;
+   border-radius: 20px;
+   color: #002B56;
+   outline: none;
+}
+.botones{
+   display: flex;
+   flex-direction: column;
+}
+@media (max-width: 768px){
+   .confirmacion{
+      height: auto;
+      padding: 100px 0 10px;
+   }
+   .confirmacion h2{
+      font-size: 60px;
+   }
+   .infFinal{
+      flex-direction: column;
+   }
+   .cajaConfirmacion{
+      width: 100%;
+   }
+   .imgPinPol{
+      width: 100%;
+   }
+} 
+@media (max-width: 450px){
+   .confirmacion h2{
+      font-size: 28px;
+   }
+   .cajaConfirmacion p{
+      font-size: 22px;
+   }
+}
