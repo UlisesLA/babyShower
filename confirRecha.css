@@ -31,7 +31,7 @@ body{
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin: 0px 0px;
 }
 .contenedorFestejo{
@@ -96,7 +96,7 @@ body{
 }
 @media (max-width:450px){
   .titulo{
-    margin-top: 40px;
+    margin: 40px 0px 0px;
     font-size: 35px;
   }
   .contenedorFestejo{
@@ -116,6 +116,7 @@ body{
     margin: 0px 0px;
   }
   .pomobpin{
-    margin-top: 10px !important;
+    margin: 10px 0px!important;
+    padding: 0px 0px 50px!important;
   }
 }
