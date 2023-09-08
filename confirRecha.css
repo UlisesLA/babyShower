@@ -19,7 +19,7 @@ body{
 }
 .titulo{
   width: 80%;
-  margin: 0px 0px;
+  margin: 0px 0px 20px;
   text-align: center;
   font-family: Bentoga,Georgia, 'Times New Roman', Times, serif;
   font-size: 87px;
@@ -43,9 +43,18 @@ body{
   align-items: center;
 }
 .contenedorFestejo h2{
+  margin: 0;
   text-align: center;
   font-family: Roboto;
   font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.523%;
+}
+.contenedorFestejo h3 {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 139.523%;
@@ -60,7 +69,7 @@ body{
   line-height: 139.523%;
 }
 .contenedorFestejo img{
-  width: 75%;
+  width: 100%;
 }
 
 @media (max-width:780px){
@@ -68,8 +77,8 @@ body{
       height: auto;
     }
     .titulo{
-      margin-top: 30px;
-      font-size: 60px;
+      margin: 30px 0px;
+      font-size: 65px;
     }
     .contenido{
       flex-direction: column;
@@ -88,13 +97,16 @@ body{
 @media (max-width:450px){
   .titulo{
     margin-top: 40px;
-    font-size: 30px;
+    font-size: 35px;
   }
   .contenedorFestejo{
     margin-top: 60px;
   }
   .contenedorFestejo h2{
     font-size: 22px;
+  }
+  .contenedorFestejo h3{
+    font-size: 18px;
   }
   .contenedorFestejo p{
     font-size: 18px;
