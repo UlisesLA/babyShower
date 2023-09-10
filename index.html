@@ -13,7 +13,7 @@
    <section class="computadora">  
       <!--Mensaje Bienvenida-->    
       <div class="tarjetaPresentacion">
-         <img class="imagBS" src="/Recursos/Titulo.svg" alt="Babyshower">
+         <img class="imagBS" src="./Recursos/Titulo.svg" alt="Babyshower">
          <h2 class="SaludoPersona">¡Hola!<br><span id="personaInvitada">Amigo</span></h2> 
       </div>
       <!--Cuerpo de la invitacion-->
@@ -21,7 +21,7 @@
          <!--Invitacion-->
          <div class="invitacion">
             <!--Imagen del calamar-->
-            <div class="contenedorCalamar"><img class="calamar" src="/Recursos/calamar.svg" alt="Calamar"></div>
+            <div class="contenedorCalamar"><img class="calamar" src="./Recursos/calamar.svg" alt="Calamar"></div>
             <!--Texto de la invitacion-->
             <div class="mensaje">
                <p>Te invitamos a unirte con nosotros para celebrar la llegada de nuestro bebé al mundo.</p>
@@ -52,22 +52,25 @@
             <div class="infFinal"> 
                <div class="cajaConfirmacion">                  
                   <p>Coloca el número de personas que asistirán incluyéndote. </p>
-                  <input class="numeroDePersonas" type="number" min="1" max="4" value="1"/>
+                  <input id="numeroP" class="numeroDePersonas" type="number" min="1" max="4" value="1"/>
+                  <p id="validacionPersonas"></p>
                   <div class="botones">
-                     <button class="boton" onclick="window.location.href='./confirmacion.html'">Confirmar</button>
-                     <button class="boton" onclick="window.location.href='./rechazar.html'">No podre asisitir</button>
+                     <input id="botonConfirmacion" type="button" class="boton" value="Confirmar">
+                     <input id="botonRechazar" type="button" class="boton"  value="No podre asisitir">
                   </div>
                </div>
-               <div class="cajaConfirmacion"><img class="imgPinPol" src="/Recursos/PolPin.gif" alt="Pollito y pinguino"></div>
+               <div class="cajaConfirmacion"><img class="imgPinPol" src="./Recursos/PolPin.gif" alt="Pollito y pinguino"></div>
             </div>
-         </div>   
+         </div>  
       </section>
-   </section>   
-   <script>
+   </section>  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script type="text/javascript" src="resgistros.js"></script>
+   <script> 
       function verMapa(){
          const map = document.getElementById('mapa');
          map.innerHTML = "<iframe class='ubicaMap' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.8181584627883!2d-99.19472676161162!3d19.40062285546665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201e61d87801f%3A0x12ccd5201ff7dacd!2sCondominio%20de%20empleados%20de%20sears!5e0!3m2!1ses-419!2smx!4v1693426438878!5m2!1ses-419!2smx' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>";
-      }
+      }      
    </script>
 </body>
 </html>
