@@ -330,6 +330,17 @@ body{
    display: flex;
    flex-direction: column;
 }
+.botonesMB{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+.mensajeMB {
+   display: none;
+}
+
 @media (max-width: 768px){
    .confirmacion{
       height: auto;
@@ -347,6 +358,17 @@ body{
    .imgPinPol{
       width: 100%;
    }
+   .botonesMB {
+      display: none;
+   }
+
+   .mensajeMB {
+      display: flex;
+      text-align: center;
+      font-family: Roboto, Arial, Helvetica, sans-serif;
+      color: #fff;
+      font-weight: 100;
+   }
 } 
 @media (max-width: 450px){
    .confirmacion h2{
@@ -361,3 +383,4 @@ body{
    color: rgb(161, 1, 1);
    font-size: 18px;
 }
+
