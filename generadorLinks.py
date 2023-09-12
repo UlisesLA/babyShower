@@ -1,6 +1,6 @@
 nombre_archivo = "invitados.txt"  # Reemplaza "archivo.txt" con el nombre de tu archivo
 modo = "r"  # "r" para lectura, "w" para escritura, "a" para añadir, etc.
-url = "https://niditoamor.com/?name="
+url = "https:/tu-liga.com/?name="
 nombre_archivo_salida = "invitaciones_creadas.txt"
 
 try:
