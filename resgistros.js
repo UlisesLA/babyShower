@@ -2,6 +2,31 @@
 const validacion_Personas = document.getElementById('validacionPersonas');
 let acompanantes;
 
+function navegador (){
+  let navegador = "";
+
+  if (navigator.userAgent.indexOf("Firefox") !== -1) {
+      navegador = "Firefox";
+  } else if (navigator.userAgent.indexOf("Chrome") !== -1) {
+      navegador = "Chrome";
+  } else if (navigator.userAgent.indexOf("Safari") !== -1) {
+      navegador = "Safari";
+  } else if (navigator.userAgent.indexOf("Edge") !== -1) {
+      navegador = "Edge";
+  } else if (navigator.userAgent.indexOf("IE") !== -1) {
+      navegador = "Internet Explorer";
+  }
+
+  if(navegador != 'Chrome'){
+    alert('Estas usando: ' + navegador + ' porfavor usa Chrome para resgistrar tu asistencia');  
+    window.location.reload();
+  }    
+}
+
+window.addEventListener('load', function() {
+  navegador ();  
+});
+
 
 //Nos da el nombre de la persona
 function nombreAPersona(){
@@ -83,14 +108,14 @@ function numeroMaximoPersonas(){
     validacion_Personas.innerHTML = 'Sólo puedes llevar un máximo de 4 personas.';
     }else{
       escritura(1);
+      navegador();
       cambiarPaginaConfirmar();
     }
   }  
 }
 
-/***************************************************************************************************************************/
-//Botones en la pantalla//
-/***************************************************************************************************************************/
+//Botones en la pantalla
+
 //Al hacer click en el boton confirmar
 $('#botonConfirmacion').click(function(){
   numeroMaximoPersonas();
@@ -98,5 +123,6 @@ $('#botonConfirmacion').click(function(){
 //Al hacer click en el boton denegar
 $('#botonRechazar').click(function(){
   escritura(0);
+  navegador();
   cambiarPaginaNegacion();
 });
