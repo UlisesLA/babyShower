@@ -1,10 +1,10 @@
 @font-face {
    font-family: "Bentoga";
-   src: url('./Recursos/Bentoga-Thin.otf') format('opentype');
+   src: url('../Recursos/Bentoga-Thin.otf') format('opentype');
 }
 @font-face {
    font-family: "Euphoria Script";
-   src: url('./Recursos/EuphoriaScript-Regular.ttf') format('truetype');
+   src: url('../Recursos/EuphoriaScript-Regular.ttf') format('truetype');
 }
 body{
    background-color: aliceblue;
