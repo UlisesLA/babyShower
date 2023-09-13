@@ -23,7 +23,7 @@ body{
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background-image: url('./Recursos/fondo_strellas.jpg');
+   background-image: url('../Recursos/fondo_strellas.jpg');
    background-size: 50%;    
    background-position: center;    
 }
