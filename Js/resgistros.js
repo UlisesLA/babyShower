@@ -1,9 +1,26 @@
+import { guardarInvitado, updateInvitados, getInvitados } from "../Js/firebase.js";
+
+let idOptenidoDB = '';
+let bandera =  false;
+
+window.addEventListener('DOMContentLoaded', async ()=>{
+  const listaIvitados = await getInvitados();
+  const nombreAComprar = nombreAPersona();
+
+  listaIvitados.forEach(doc =>{
+    const personaDelLaBase = doc.data().nombre;
+
+    if(personaDelLaBase == nombreAComprar){
+      idOptenidoDB = doc.id ;
+      bandera = true;      
+    }
+  });
+});
 
 //Funcion que cambia la de pagina a la de confirmacion
 function cambiarPaginaConfirmar(){
   window.location.href = 'confirmacion.html';
 }
-
 //Funcion que nos lleva a la opcion de negacion
 function cambiarPaginaNegacion(){
   window.location.href = 'rechazar.html';
@@ -71,30 +88,52 @@ function validaciones(aistencia){
     if(valor > 4){
       validacion_Personas.innerHTML = 'Sólo puedes llevar un máximo de 4 personas.';
     }else{
-      if (aistencia == 1) {
-        escritura(id, invitado, aistencia, valor);
-        //cambiarPaginaConfirmar();
-      } else {
-        escritura(id, invitado, 0, '0');
-        //cambiarPaginaNegacion();
-      }      
+      if(bandera){
+        if (aistencia == 1) {
+          editar(id, invitado, aistencia, valor);
+          setTimeout(() => {
+            cambiarPaginaConfirmar();
+          },500);
+        } else {
+          editar(id, invitado, 0, '0');
+          setTimeout(() => {
+            cambiarPaginaNegacion();
+          },500);
+        }
+      }else{
+        if (aistencia == 1) {
+          escritura(id, invitado, aistencia, valor);
+          setTimeout(() => {
+            cambiarPaginaConfirmar();
+          },500);
+        } else {
+          escritura(id, invitado, 0, '0');
+          setTimeout(() => {
+            cambiarPaginaNegacion();
+          },500);
+        } 
+      }
     }
   }  
 }
 
 //funcion manda informacion al servidor
-async function escritura(id, invitado, asistir, acompanantes){
-  try {
-
+function escritura(id, invitado, asistir, acompanantes){
     let parametros = {
       "id" : id,
       "nombre" : invitado,
       "asitencia" : asistir,
       "numero_personas": acompanantes 
-    };
-    console.log(parametros);   
+    };    
+    guardarInvitado(parametros);    
+}
 
-  } catch (error) {
-    console.log(error);
-  }  
+function editar(id, invitado, asistir, acompanantes){
+  let parametros = {
+    "id" : id,
+    "nombre" : invitado,
+    "asitencia" : asistir,
+    "numero_personas": acompanantes 
+  };    
+  updateInvitados(idOptenidoDB, parametros);    
 }
