@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Babyshower</title>
+    <link rel="icon" href="./Recursos/baby_flaticon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./Css/normalize.css">
+    <link rel="stylesheet" href="./Css/listas.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    
+  </head>
+
+  <body>
+    <h1 class="titleListaRegalos">Lista de regalos ya adquiridos</h1>
+    <h2 class="disclaimer">Ayúda a los demás invitados a conocer el regalo que ya has adquirido, para evitar duplicados.</h2>
+    <h4>La lista es anonima.</h4>
+
+    <section class="ListaDeRegalos">
+      <div class="insertarElementos">
+        <input class="entrada" id="entradaRegalos" type="text" placeholder="Agregar regalo"  maxlength="100">
+        <input type="button" value="Agregar Regalo" class="boton btnMB" id="AgregoRegalo">
+      </div>
+      <div><ul id="listaRegalitos"></ul></div>      
+    </section>  
+
+    <img class="pollosEmocionados" src="./Recursos/PinguinosEmocionados.png" alt="pollitos felices">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="./Js/listaRegalos.js"></script>
+  </body>
+</html>

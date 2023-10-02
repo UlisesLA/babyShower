@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Bentoga";
+  src: url('../Recursos/Bentoga-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: "Euphoria Script";
+  src: url('../Recursos/EuphoriaScript-Regular.ttf') format('truetype');
+}
+
+body{
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #036 17.81%, #AAADFC 100%);
+  color: white;
+}
+h4{
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+}
+
+.titleListaRegalos{  
+  text-align: center;
+  font-family: Bentoga;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 139.523%;
+}
+
+.disclaimer{  
+  text-align: center;
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 139.523%;
+}
+
+.ListaDeRegalos{
+  background-color: #FFFFFF;
+  width: 75%;
+  padding: 2%;
+  border-radius: 40px;
+  margin-bottom: 5%;
+}
+
+.insertarElementos{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.entrada{
+  width: 72.5%;
+  height: 40px;
+  padding-left: 44px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  background-color: #FCFBFB;
+  color:rgb(85, 85, 85);  
+  margin-right: 2.5%;
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+  font-size: 20px;
+}
+
+.entrada::placeholder{
+  color: rgb(0, 51, 102);
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.15px;
+}
+
+#listaRegalitos{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+
+  border-top: solid 1px #D9D9D9;
+}
+
+li{
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: solid 1px #D9D9D9;
+  color: #292D32;
+  font-family: Roboto, Arial, Helvetica, sans-serif;;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.14px;
+}
+
+.pollosEmocionados{
+  width: 50%;
+}
+
+@media (max-width:768px){
+    .insertarElementos{
+      margin-top: 10px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .disclaimer{
+      width: 75%;
+    }
+
+    li{
+      width: 90%;
+    }
+
+    .btnMB{
+      width: 60% !important;
+    }
+}
+@media (max-width:450px){
+  .titleListaRegalos{
+    font-size: 32px;
+  }
+
+  .btnMB{
+    width: 75% !important;
+    font-size: 20px !important;
+  }
+
+  li{
+    font-size: 14px;
+    width: 90%;
+  }
+}
